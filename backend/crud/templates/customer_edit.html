@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Editar Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Editar Cliente</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="customer_name" value="{{ record.name }}" required>
+            <input type="email" name="customer_email" value="{{ record.email }}" required>
+            <input type="text" name="customer_city" value="{{ record.city }}" required>
+            <button type="submit">Actualizar</button>
+        </form>
+    </div>
+</body>
+</html>
